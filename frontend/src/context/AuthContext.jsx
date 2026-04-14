@@ -17,10 +17,8 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem('access_token');
     if (token) {
       try {
-        // You'll need this endpoint later - for now just set a placeholder
-        // const response = await api.get('/auth/me/');
-        // setUser(response.data);
-        setUser({ email: 'user@example.com', name: 'User' }); // Placeholder
+        const response = await api.get('/auth/me/');
+        setUser(response.data);
       } catch (error) {
         authService.logout();
         setUser(null);

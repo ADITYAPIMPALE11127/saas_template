@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
     { path: '/dashboard', name: 'Dashboard', icon: '📊' },
     { path: '/billing', name: 'Billing', icon: '💰' },
     { path: '/history', name: 'History', icon: '📜' },
+    { path: '/profile', name: 'Profile', icon: '👤' },
   ];
 
   return (

@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Billing from './pages/Billing'
 import History from './pages/History'
+import Profile from './pages/Profile'
 
 function App() {
   const { isAuthenticated, loading } = useAuth()
@@ -56,6 +57,15 @@ function App() {
         isAuthenticated ? (
           <Layout>
             <History />
+          </Layout>
+        ) : (
+          <Navigate to="/login" />
+        )
+      } />
+      <Route path="/profile" element={
+        isAuthenticated ? (
+          <Layout>
+            <Profile />
           </Layout>
         ) : (
           <Navigate to="/login" />
